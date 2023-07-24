@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap, moment practise</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <button type="button t-tip" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-placement="bottom" data-bs-title="Default tooltip">
+                    Модальна кнопка
+                </button>
+                  
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Модальне вікно</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Модальне вікно з деякими даними
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-primary m-2" id="alertButton">Показати/Приховати алерт</button>
+                  <div class="alert alert-success mt-3" role="alert" id="alertMessage" style="display: none;">
+                      Алерт
+                  </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3 m-4 p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 text-center" id="my-date"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="m-3">
+              <p>Введіть дату народження (день.місяць.рік):</p>
+              <input type="text"
+                class="form-control w-25" name="birth" id="user-birth" aria-describedby="helpId" placeholder="01.12.2000">
+                <button type="button" class="btn btn-primary mt-2" id="btn-confirn">Підтвердити</button>
+                <button type="button" class="btn btn-secondary mt-2" id="btn-reset">Очистити</button>
+            </div>
+            <div class="alert alert-success m-3 w-50" role="alert" id="alertMessageCorrect" style="display: none">
+                
+            </div>
+            <div class="alert alert-danger m-3 w-50 text-center" role="alert" id="alertMessageIncorrect" style="display: none">
+                Ви ввели неправильну дату! Або не ввели її взагалі :)
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/momentjs.com_downloads_moment.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
